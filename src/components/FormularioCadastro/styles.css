@@ -1,0 +1,153 @@
+/* src\components\FormularioCadastro\styles.css */
+
+.container {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+  
+.container img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+  
+h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #284ea7;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+  
+/* Estilo unificado para inputs e selects */
+input,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+  
+input,
+select {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estados de hover e focus consistentes */
+input:hover,
+select:hover {
+    border-color: #284ea7;
+}
+
+input:focus,
+select:focus {
+    border-color: #284ea7;
+    box-shadow: 0 0 0 2px rgba(40, 78, 167, 0.1);
+}
+  
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #28a745;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+  
+button:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+  
+.link-jogadores {
+    margin-top: 25px;
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 14px;
+}
+  
+.link-jogadores:hover {
+    text-decoration: none;
+}
+
+/* Estilo para os títulos dos campos */
+h5 {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #284ea7;
+    margin-bottom: 5px;
+    margin-top: 0;
+    width: 100%;
+    text-align: left;
+}
+
+/* Ajustes específicos para o select */
+select {
+    cursor: pointer;
+    appearance: none; /* Remove a seta padrão do navegador */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+/* Estilo para as opções do select */
+select option {
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilo para a primeira opção (placeholder) */
+select option[value=""] {
+    color: #999;
+    font-style: italic;
+}
+
+/* Estados de validação */
+input:invalid,
+select:invalid {
+    border-color: #dc3545;
+}
+
+input:invalid:focus,
+select:invalid:focus {
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        max-width: 320px;
+    }
+    
+    input,
+    select {
+        font-size: 16px; /* Evita zoom no iOS */
+    }
+}
